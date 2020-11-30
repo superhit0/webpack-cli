@@ -487,6 +487,9 @@ class WebpackCLI {
                 const JSONStats = JSON.stringify(stats.toJson(foundStats), null, 2);
 
                 try {
+                    if (existsSync(args.json)) {
+                        logger.info(`file '${args.json}' already exist. CLI will overwrite the existing file.`);
+                    }
                     writeFileSync(args.json, JSONStats);
 
                     logger.success(`stats are successfully stored as json to ${args.json}`);
