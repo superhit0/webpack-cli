@@ -488,7 +488,7 @@ class WebpackCLI {
 
                 try {
                     if (existsSync(args.json)) {
-                        logger.info(`file '${args.json}' already exists. CLI will overwrite the existing file.`);
+                        logger.warn(`file '${args.json}' already exists and will be overwritten.`);
                     }
                     writeFileSync(args.json, JSONStats);
 

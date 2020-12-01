@@ -14,6 +14,7 @@ const outputDirectories = [
     'test-cache-path',
     'test-locate-cache',
     'stats.json',
+    'compilation-stats.json',
 ];
 
 const folderStrategy = (stats, file) => {
