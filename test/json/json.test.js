@@ -81,7 +81,7 @@ describe('json flag', () => {
         // run 2nd compilation
         ({ stdout, exitCode } = run(__dirname, ['--json', 'stats.json']));
 
-        expect(stdout).toContain(`file 'stats.json' already exist. CLI will overwrite the existing file.`);
+        expect(stdout).toContain(`file 'stats.json' already exists. CLI will overwrite the existing file.`);
         expect(stdout).toContain(successMessage);
         expect(exitCode).toBe(0);
 
